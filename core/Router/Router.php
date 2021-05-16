@@ -32,7 +32,7 @@ class Router {
     {
         $uri = '/' . trim(explode('?', $_SERVER['REQUEST_URI'])[0], '/');
         $invoked = 0;
-        if(isset($this->routes[$_SERVER['REQUEST_METHOD'])) {
+        if(isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
             foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route=>$callback) {
                 $route = preg_replace('/\/{(.*?)}/', '/(.*?)', $route);
                 if (preg_match_all('#^' . $route . '$#', $uri, $matches, PREG_OFFSET_CAPTURE)) {
