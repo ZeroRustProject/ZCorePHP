@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f0f0;
+    }
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    h1,h2,h3,h4,h5,h6,p {
+        margin: 0;
+        font-weight: 400;
+    }
+    .muted {
+        opacity: .7;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="center">
+    <h1>Hello world!</h1>
+    <p class="muted">{{ app.title }} {{ app.version }}</p>
+</div>
+{% endblock %}

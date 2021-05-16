@@ -7,13 +7,12 @@ class Database {
 
     public static function Init()
     {
-        $config = json_decode(file_get_contents(APP_DIR . '/database.config.json'), true);
         self::$db = new \Medoo\Medoo([
             'database_type' => 'mysql',
-            'database_name' => $config['database'],
-            'server' => $config['hostname'],
-            'username' => $config['username'],
-            'password' => $config['password']
+            'database_name' => APP_CONFIG['sql']['database'],
+            'server' => APP_CONFIG['sql']['hostname'],
+            'username' => APP_CONFIG['sql']['username'],
+            'password' => APP_CONFIG['sql']['password']
         ]);
     }
 

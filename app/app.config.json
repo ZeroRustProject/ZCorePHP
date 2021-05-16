@@ -1,0 +1,15 @@
+{
+    "app": {
+        "title": "ZCorePHP",
+        "version": "0.0.2"
+    },
+    "sql": {
+        "hostname": "localhost",
+        "username": "root",
+        "password": "root",
+        "database": "zcorephp"
+    },
+    "twig": {
+        "cache": false
+    }
+}
